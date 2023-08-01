@@ -2,10 +2,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
-const generateHTML = ({title,description,usage,install,reportIssues,collaborate})=> 
+const generateHTML = ({title,keyword,description,usage,install,reportIssues,test,twitter,github,email,license})=> 
 `# ${title}
 
-${Keywords}
+${keyword}
 
 ## Table of Content
 
@@ -30,13 +30,11 @@ ${usage}
 
 Load <pre><code>npm i</code></pre> to install all the dependencis then run <pre><code>node index.js</code></pre> and follow all the prompts
 
-${install}
 
 ## Test
 
 To test it you need to run <pre><code>npm run test</code></pre>
 
-${test}
 
 ## Questions
 
@@ -80,19 +78,19 @@ inquirer.prompt([
         name:"usage"
     },
     {
-        type: "input",
-        message: "Besides generic installation (npm i ) do you want to add something else?",
+        type: "confirm",
+        message: "add installation (npm i ) instructions?",
         name:"install"
     },
     {
         input: "list",
         message: "How do users report issues?",
         name:"reportIssues",
-        choice: ["GitHub Issues Tabs","Private Message"]
+        choices: ["GitHub Issues Tabs","Private Message"]
     },
     {
-        type: "input",
-        message: "Besides generic test ( npm run test ) do you want to add something else?",
+        type: "confirm",
+        message: "add ( npm run test ) instructions for testing?",
         name:"test"
     },
     {
@@ -114,7 +112,7 @@ inquirer.prompt([
         type: "list",
         message: "What type of license?",
         name:"license",
-        choice: ["MIT","ISC","Apache"]
+        choices: ["MIT","ISC","Apache"],
     }
 
 ])

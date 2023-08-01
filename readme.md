@@ -1,23 +1,52 @@
-# Generate Readme File
+# joel
 
-What the app is for
+ckoe
 
-## Description
+## Table of Content
 
-In this project I am able to generate a new Readme file using prompts from inquirer and create files using FileSystem
+- [Description](#description)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Test](#test)
+- [Questions](#questions)
+- [Issues](#issues)
+- [License](#license)
+- [Contribute](#contribute)
 
-## How to use it
+## Description 
 
-Load " npm i" to install all the dependencis then run " node index.js" and follow the prompts
+doeo
 
-## Install it
+## Usage
 
-you can donwnload all the dependencies using npm i and can run this on your local computer
+geo
 
-## How to Report Issues
+## Installation
 
-Users can raise an issue ticket on the github Issues tab
+Load <pre><code>npm i</code></pre> to install all the dependencis then run <pre><code>node index.js</code></pre> and follow all the prompts
 
-## How to Contribute
+true
 
-If you want to collaborate please fork the repository and tag me on Twitter with a demo of your changes, then request a pull request and I will review it
+## Test
+
+To test it you need to run <pre><code>npm run test</code></pre>
+
+false
+
+## Questions
+
+For any questions please check my [Github profile](https://github.com/felipfew/)
+
+or you can [email me](mailto:felip@novws) for more pressing questions.
+
+## Issues
+
+Users can raise an issue ticket by: mir
+
+## License
+
+<img src="https://img.shields.io/static/v1?label=License&message=Apache&color=GREEN"/>
+
+## Contribute
+
+If you want to collaborate please fork the repository and tag me on [Twitter](https://twitter.com/no) where I am more active, then request a pull request and I will review it
