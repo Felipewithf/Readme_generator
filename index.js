@@ -5,7 +5,7 @@ const fs = require('fs');
 const generateHTML = ({title,keyword,description,usage,install,reportIssues,test,twitter,github,email,license})=> 
 `# ${title}
 
-${keyword}
+Keywords: ${keyword}
 
 ## Table of Content
 
@@ -64,7 +64,7 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: " Project keyword",
+        message: " Project keyword(s)",
         name:"keyword"
     },
     {
