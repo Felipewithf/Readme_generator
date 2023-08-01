@@ -86,7 +86,7 @@ inquirer.prompt([
         input: "list",
         message: "How do users report issues?",
         name:"reportIssues",
-        choices: ["GitHub Issues Tabs","Private Message"]
+        choices: ["GitHub Issues Tabs","Private Message"],
     },
     {
         type: "confirm",
