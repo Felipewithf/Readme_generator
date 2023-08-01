@@ -2,30 +2,59 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
-const generateHTML = ({title,description,howto,install,reportIssues,collaborate})=> 
+const generateHTML = ({title,description,usage,install,reportIssues,collaborate})=> 
 `# ${title}
 
-What the app is for
+${Keywords}
 
-## Description
+## Table of Content
+
+- [Description](#description)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Test](#test)
+- [Questions](#questions)
+- [Issues](#issues)
+- [License](#license)
+- [Contribute](#contribute)
+
+## Description 
 
 ${description}
 
-## How to use it
+## Usage
 
-${howto}
+${usage}
 
-## Install it
+## Installation
+
+Load <pre><code>npm i</code></pre> to install all the dependencis then run <pre><code>node index.js</code></pre> and follow all the prompts
 
 ${install}
 
-## How to Report Issues
+## Test
 
-${reportIssues}
+To test it you need to run <pre><code>npm run test</code></pre>
 
-## How to Contribute
+${test}
 
-${collaborate}
+## Questions
+
+For any questions please check my [Github profile](https://github.com/${github}/)
+
+or you can [email me](mailto:${email}) for more pressing questions.
+
+## Issues
+
+Users can raise an issue ticket by: ${reportIssues}
+
+## License
+
+<img src="https://img.shields.io/static/v1?label=License&message=${license}&color=GREEN"/>
+
+## Contribute
+
+If you want to collaborate please fork the repository and tag me on [Twitter](https://twitter.com/${twitter}) where I am more active, then request a pull request and I will review it
 `;
 
 
@@ -42,12 +71,17 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "Describe how to use it",
+        message: "Describe what it does",
         name:"description"
     },
     {
         type: "input",
-        message: "Describe how to install it",
+        message: "Describe how users use it",
+        name:"usage"
+    },
+    {
+        type: "input",
+        message: "Besides generic installation (npm i ) do you want to add something else?",
         name:"install"
     },
     {
@@ -58,13 +92,13 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "How do users test it?",
+        message: "Besides generic test ( npm run test ) do you want to add something else?",
         name:"test"
     },
     {
         type: "input",
-        message: "Add your twitter for future collaborators",
-        name:"collaborate"
+        message: "Add your twitter username for future collaborators to reach out",
+        name:"twitter"
     },
     {
         type: "input",
@@ -92,5 +126,3 @@ inquirer.prompt([
     );
 
 });
-
-module.exports = inquirer;
